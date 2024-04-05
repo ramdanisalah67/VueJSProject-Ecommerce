@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app-root">
+
+        <h2>My name is {{name}}</h2>
+        <h2>my age is {{age}} </h2>
+        <p>{{sayHi('salah-eddine')}}</p>
+        <a v-bind:href="link">google</a>
+        <button @click="increment">click</button>
+        <a href="https://www.microsoft.com" @click.prevent>microsoft</a>
+        <button @click.once="testOnce" >once</button>
+        <input type="text" @keyup.y="increment">
+
+        <!--two way data binding-->
+        <p>Name</p>
+        <input type="text" placeholder="enter Name" v-model="employeeName">
+        <p>salary</p>
+        <input type="text" placeholder="enter salary" v-model="salary">
+        <br><br>
+        <button type="submit" @click="infoEmployee">print employee info</button>
+
+    </div>    
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+</html>

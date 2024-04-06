@@ -10,57 +10,14 @@
 </head>
 <body>
     <div id="app-root-1" class="bg-dark text-white">
-        <p class="container-fluid bg-info">{{username}}</p>
-        <p>a = {{incrementA}}</p>
-        
-        <button @click="a++">increment</button>
-
-        <p>b = {{incrementB}}</p>
-        
-        <button @click="b++">increment</button>
-
-        <h3>Style play</h3>
-
-        <p :class="myColor">welcome salah-eddine to VueJs</p>
-         <input type="text" v-model="myColor">   
-        
-         <!--if condition-->
-         <p>number 1</p>
-         <input type="number"  v-model="num1">
-         <p>number 1</p>
-         <input type="number"  v-model="num2">
-         <p><button @click="calc()">calc</button></p>
-         <p>result is : {{s}}</p>
-        
-         <!--define condition-->
-         <p v-if="s > 20">greather than  20</p>
-         <p v-else-if="s < 20">less than  20</p>
-
-         <p v-else>equal   20</p>
-
-         <!--loops-->
-        <div v-for="student in students" :key="student.id" class="text-dark">
-            <p class="bg-light">{{student.name}}</p>
-            <p v-for="t in student.technologies">
-                <span class="text-light">{{t}}</span>
-            </p>
-            
-        </div>
-
-
+      <first_component></first_component>
 
     </div>    
 
-    <div id="app-root-2">
-        <p class="container-fluid bg-success">{{username}}</p>
-        <button class="btn btn-secondary" @click="changeUsernameOfVue1()">change</button>
 
-        <!--refs (references)-->
-        <label for="salary">salary</label>
-        <input type="number" ref="studentSalary">
-        <button @click="checkRefs()" class="btn btn-dark text-white">check</button>
-    </div>
 
+
+    
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./script.js"></script>

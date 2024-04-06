@@ -3,31 +3,61 @@ const {createApp} = Vue ;
 createApp({
     data(){
         return {
-            name : "salah-eddine",
-            age  : 26,
-            link:"https://www.google.com",
-            employeeName:"",
-            salary:0
+            username:"salah-eddine",
+            a:0,
+            b:0,
+            myColor:"",
+            num1:0,
+            num2:0,
+            s:0,
+            students:[
+                {
+                    id:1,
+                    name:"salah-eddine",
+                    technologies:["java","python","JavaScript"]
+                    
+                },
+                {
+                    id:2,
+                    name:"ahmed",
+                    technologies:["c++","AI","Flutter"]
+
+                },
+                 {
+                    id:3,
+                    name:"omar",
+                    technologies:["Symfony","SpringBoot","Kotlin"]
+
+                },
+
+            ]
         };
     },
     methods: {
-        sayHi(name){
-            return "good morning "+name
-        },
-        increment(){
-            this.age++
-        },
-        testOnce(){
-            console.log("once")
-        },
-        infoEmployee(){
-            let emp = {
-                n:this.employeeName,
-                s:this.salary ,
-
-            }
-            console.log(emp)
-        }
-
+        calc(){
+            this.s = this.num1 + this.num2   
+       }
+    },
+    computed: {
+        incrementA(){
+            console.log("A")
+           return this.a*2 ;
+         },
+    
+         incrementB(){
+            console.log("B")
+            return this.b*2 ;
+    
+         },
+        
     }
-}).mount("#app-root")
+}).mount("#app-root-1")
+
+createApp({
+    data(){
+        return {
+            
+            username:"ahmed"
+        }
+    },
+}).mount("#app-root-2")

@@ -4,28 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
 <body>
-    <div id="app-root">
+    <div id="app-root-1" class="bg-dark text-white">
+        <p class="container-fluid bg-info">{{username}}</p>
+        <p>a = {{incrementA}}</p>
+        
+        <button @click="a++">increment</button>
 
-        <h2>My name is {{name}}</h2>
-        <h2>my age is {{age}} </h2>
-        <p>{{sayHi('salah-eddine')}}</p>
-        <a v-bind:href="link">google</a>
-        <button @click="increment">click</button>
-        <a href="https://www.microsoft.com" @click.prevent>microsoft</a>
-        <button @click.once="testOnce" >once</button>
-        <input type="text" @keyup.y="increment">
+        <p>b = {{incrementB}}</p>
+        
+        <button @click="b++">increment</button>
 
-        <!--two way data binding-->
-        <p>Name</p>
-        <input type="text" placeholder="enter Name" v-model="employeeName">
-        <p>salary</p>
-        <input type="text" placeholder="enter salary" v-model="salary">
-        <br><br>
-        <button type="submit" @click="infoEmployee">print employee info</button>
+        <h3>Style play</h3>
+
+        <p :class="myColor">welcome salah-eddine to VueJs</p>
+         <input type="text" v-model="myColor">   
+        
+         <!--if condition-->
+         <p>number 1</p>
+         <input type="number"  v-model="num1">
+         <p>number 1</p>
+         <input type="number"  v-model="num2">
+         <p><button @click="calc()">calc</button></p>
+         <p>result is : {{s}}</p>
+        
+         <!--define condition-->
+         <p v-if="s > 20">greather than  20</p>
+         <p v-else-if="s < 20">less than  20</p>
+
+         <p v-else>equal   20</p>
+
+         <!--loops-->
+        <div v-for="student in students" :key="student.id" class="text-dark">
+            <p class="bg-light">{{student.name}}</p>
+            <p v-for="t in student.technologies">
+                <span class="text-light">{{t}}</span>
+            </p>
+            
+        </div>
+
+
 
     </div>    
+
+    <div id="app-root-2">
+        <p class="container-fluid bg-success">{{username}}</p>
+    </div>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

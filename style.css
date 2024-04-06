@@ -1,0 +1,13 @@
+.red {
+    box-shadow: 10px 10px 10px rgb(145, 60, 60);
+    background-color: rgb(218, 193, 160) ;
+    width: 50%;
+    padding: 10px;
+}
+
+.blue {
+    box-shadow: 10px 10px 10px rgb(78, 95, 194);
+    background-color: rgb(218, 193, 160) ;
+    width: 50%;
+    padding: 10px;
+}

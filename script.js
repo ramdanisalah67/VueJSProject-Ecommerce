@@ -1,6 +1,6 @@
 const {createApp} = Vue ;
 
-createApp({
+const vue_1 = createApp({
     data(){
         return {
             username:"salah-eddine",
@@ -53,11 +53,23 @@ createApp({
     }
 }).mount("#app-root-1")
 
-createApp({
+const vue_2 = createApp({
+
+
     data(){
         return {
-            
             username:"ahmed"
         }
     },
+    methods :{
+
+        changeUsernameOfVue1(){
+            vue_1.username = "user1"
+            console.log("vue_1 updated")
+        },
+        checkRefs(){
+            console.log(this.$refs.studentSalary.value)
+        }
+    }
+
 }).mount("#app-root-2")

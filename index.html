@@ -53,6 +53,12 @@
 
     <div id="app-root-2">
         <p class="container-fluid bg-success">{{username}}</p>
+        <button class="btn btn-secondary" @click="changeUsernameOfVue1()">change</button>
+
+        <!--refs (references)-->
+        <label for="salary">salary</label>
+        <input type="number" ref="studentSalary">
+        <button @click="checkRefs()" class="btn btn-dark text-white">check</button>
     </div>
 
 

@@ -1,36 +1,22 @@
 <template>
-  <p>
-    welcome To Your App state => {{ isActive }} ||
-    {{ employees.map((e) => e.name) }}
-  </p>
-  <navBar />
-  <EmployesT :emps="employees" :isActive="isActive" />
   <router-view></router-view>
 </template>
 
 <script>
-import navBar from "@/components/navBar.vue";
-import EmployesT from "@/components/EmployesT.vue";
+//import EmployesT from "@/components/EmployesT.vue";
 export default {
   data() {
     return {
-      isActive: true,
-      employees: [
-        {
-          name: "salah-eddine",
-          salary: 15,
-        },
-        {
-          name: "yassine",
-          salary: 19,
-        },
-      ],
-      numbersEmp: 25,
+      age: 25,
     };
   },
   components: {
-    navBar,
-    EmployesT,
+    // EmployesT,
+  },
+  methods: {
+    logs() {
+      console.log("Employees's Data saved !!");
+    },
   },
 };
 </script>
@@ -64,5 +50,9 @@ p {
   color: white;
   width: 20%;
   margin: auto;
+}
+.em {
+  position: relative;
+  left: 200px;
 }
 </style>

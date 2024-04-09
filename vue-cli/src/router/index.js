@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import MyView from "@/views/myView.vue";
-import NavBar from "@/components/navBar.vue";
 import AboutPage from "@/views/aboutPage.vue";
-import EmployesT from "@/components/EmployesT.vue";
+
+import LifeCycle from "@/components/LifeCycle.vue";
+import MyView from "@/views/myView.vue";
 
 const routes = [
   {
@@ -10,20 +10,17 @@ const routes = [
     name: "myView",
     component: MyView,
   },
-  {
-    path: "/navbar",
-    name: "navbar",
-    component: NavBar,
-  },
+
   {
     path: "/about",
     name: "about",
     component: AboutPage,
   },
+
   {
-    path: "/emps",
-    name: "emps",
-    component: EmployesT,
+    path: "/player",
+    name: "player",
+    component: LifeCycle,
   },
 ];
 
